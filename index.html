@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Ruei-Hong (David) Liao</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Personal homepage of Ruei-Hong (David) Liao, computer science student interested in AI security and trustworthy systems." />
+  <style>
+    :root {
+      --bg: #f5f5f7;
+      --card-bg: #ffffff;
+      --accent: #2563eb;
+      --accent-light: #dbeafe;
+      --text-main: #111827;
+      --text-muted: #6b7280;
+      --border: #e5e7eb;
+      --shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+      --radius-lg: 16px;
+      --radius-xl: 24px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top left, #e0f2fe 0, #f5f5f7 40%, #f9fafb 100%);
+      color: var(--text-main);
+      line-height: 1.6;
+      padding: 24px;
+    }
+
+    .page {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    header {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-bottom: 28px;
+    }
+
+    .nav {
+      display: flex;
+      justify-content: flex-end;
+      gap: 18px;
+      font-size: 0.95rem;
+    }
+
+    .nav a {
+      text-decoration: none;
+      color: var(--text-muted);
+      padding-bottom: 2px;
+      border-bottom: 1px solid transparent;
+    }
+
+    .nav a:hover {
+      color: var(--accent);
+      border-color: var(--accent-light);
+    }
+
+    .hero {
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: var(--radius-xl);
+      padding: 28px 24px;
+      box-shadow: var(--shadow);
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
+      gap: 20px;
+      align-items: center;
+    }
+
+    @media (max-width: 720px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .hero-left h1 {
+      font-size: 1.9rem;
+      margin-bottom: 4px;
+    }
+
+    .hero-tagline {
+      font-size: 1rem;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+    }
+
+    .hero-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.85rem;
+      background: var(--accent-light);
+      color: var(--accent);
+      padding: 4px 10px;
+      border-radius: 999px;
+      margin-bottom: 10px;
+    }
+
+    .hero-meta {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 10px;
+    }
+
+    .hero-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 6px;
+    }
+
+    .hero-links a {
+      font-size: 0.9rem;
+      text-decoration: none;
+      padding: 6px 12px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      color: var(--text-main);
+      background: #fff;
+    }
+
+    .hero-links a.primary-link {
+      background: var(--accent);
+      color: #fff;
+      border-color: var(--accent);
+    }
+
+    .hero-links a:hover {
+      border-color: var(--accent);
+    }
+
+    .hero-right {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+    }
+
+    main {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      margin-top: 12px;
+      margin-bottom: 32px;
+    }
+
+    section {
+      background: rgba(255, 255, 255, 0.92);
+      border-radius: var(--radius-lg);
+      padding: 20px 18px 18px;
+      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.04);
+      border: 1px solid #e5e7eb44;
+    }
+
+    section h2 {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+    }
+
+    .item {
+      margin-top: 8px;
+      padding-top: 8px;
+      border-top: 1px solid var(--border);
+    }
+
+    .item:first-of-type {
+      border-top: none;
+      padding-top: 0;
+    }
+
+    .item-header {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      font-size: 0.93rem;
+      margin-bottom: 2px;
+    }
+
+    .item-title {
+      font-weight: 600;
+    }
+
+    .item-subtitle {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    .item-meta {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    ul {
+      margin-left: 16px;
+      margin-top: 4px;
+      font-size: 0.93rem;
+    }
+
+    ul li + li {
+      margin-top: 3px;
+    }
+
+    footer {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      text-align: center;
+      margin-top: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <nav class="nav">
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="hero">
+        <div class="hero-left">
+          <div class="hero-pill">
+            <span>🎓</span>
+            <span>UW–Madison · Computer Science</span>
+          </div>
+          <h1>Ruei-Hong (David) Liao</h1>
+          <p class="hero-tagline">
+            Interested in AI security, trustworthy systems, and real-world reliability.
+          </p>
+          <p class="hero-meta">
+            B.S. Computer Science, University of Wisconsin–Madison (Dec 2025) · GPA 3.70
+          </p>
+          <div class="hero-links">
+            <!-- TODO: Replace with your actual URLs -->
+            <a class="primary-link" href="mailto:rliao25@wisc.edu">Email</a>
+            <a href="https://github.com/your-github-username" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://www.linkedin.com/in/your-linkedin" target="_blank" rel="noopener">LinkedIn</a>
+            <!-- Optional: link to PDF resume -->
+            <!-- <a href="David_Liao_Resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a> -->
+          </div>
+        </div>
+
+        <div class="hero-right">
+          <p>
+            I like working on systems that people actually rely on: EV charging platforms,
+            security tooling, and AI systems that have to behave safely and predictably.
+          </p>
+          <p>
+            Recently, I have:
+          </p>
+          <ul>
+            <li>Built a production EV charging information platform in Taiwan’s national ecosystem.</li>
+            <li>Developed exploits and cryptanalysis tools for a graduate security course (CS 642).</li>
+            <li>Implemented deep learning and search-based game AI in coursework.</li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section id="experience">
+        <h2>Experience</h2>
+
+        <div class="item">
+          <div class="item-header">
+            <div>
+              <div class="item-title">Software Engineering Intern · Micro-Star International (MSI)</div>
+              <div class="item-subtitle">Taipei, Taiwan · May 2025 – Aug 2025</div>
+            </div>
+          </div>
+          <ul>
+            <li>Developed and deployed a production EV charging information platform used in Taiwan’s national charging ecosystem.</li>
+            <li>Integrated Angular frontend with Go / Gin / GORM / PostgreSQL and Docker to deliver real-time charger status and metrics.</li>
+            <li>Implemented compliance with Taiwan’s EV Charger Data Standard (XML V1.03) for operators, stations, connectors, and live status feeds.</li>
+            <li>Designed secure user workflows, including authentication, password recovery, and charge point operator assignment with validation.</li>
+          </ul>
+        </div>
+
+        <div class="item">
+          <div class="item-header">
+            <div>
+              <div class="item-title">Cybersecurity Intern · National Institute of Cybersecurity of Taiwan</div>
+              <div class="item-subtitle">Taipei, Taiwan · May 2024 – Aug 2024</div>
+            </div>
+          </div>
+          <ul>
+            <li>Integrated the Llama Guard safety module into ChatGPT-based examples to detect and respond to security-sensitive inputs.</li>
+            <li>Tested security configuration compliance tools for Red Hat Enterprise Linux 8 and deployed Windows Server 2016 government baselines using LGPO.</li>
+            <li>Conducted host vulnerability scanning and validation using Nessus and Nmap.</li>
+            <li>Supported creation of instructional materials on secure configuration and studied CEH material to deepen knowledge of attack and defense techniques.</li>
+          </ul>
+        </div>
+
+        <div class="item">
+          <div class="item-header">
+            <div>
+              <div class="item-title">Assistant Teacher · Wiedu Corporation</div>
+              <div class="item-subtitle">Remote · Jun 2021 – Aug 2021</div>
+            </div>
+          </div>
+          <ul>
+            <li>Assisted instructors in teaching coding courses covering Java, HTML, MySQL, JDBC, JavaScript, and related web technologies.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="projects">
+        <h2>Selected Projects</h2>
+
+        <div class="item">
+          <div class="item-header">
+            <div>
+              <div class="item-title">Econnect Monitor · EV Charging Platform</div>
+              <div class="item-subtitle">Angular · Go / Gin · PostgreSQL · Docker</div>
+            </div>
+          </div>
+          <ul>
+            <li>Built a full-stack EV charging monitoring system with real-time dashboards via Server-Sent Events (SSE).</li>
+            <li>Implemented CPO management tools (search, edit, station assignment) and support for Taiwan’s EV Charger Data Standard.</li>
+            <li>Part of a design that received an iF Design Award for an energy management system.</li>
+          </ul>
+        </div>
+
+        <div class="item">
+          <div class="item-header">
+            <div>
+              <div class="item-title">Control Flow Hijacking & ROP Exploitation</div>
+              <div class="item-subtitle">C · x86-64 · GDB · ROPgadget · CS 642</div>
+            </div>
+          </div>
+          <ul>
+            <li>Engineered stack and heap overflow exploits to hijack control flow in vulnerable binaries.</li>
+            <li>Chained PLT calls and ROP gadgets to perform privileged actions and launch shell access.</li>
+            <li>Used GDB and ROPgadget to analyze memory layout, extract gadgets, and debug payloads step by step.</li>
+          </ul>
+        </div>
+
+        <div class="item">
+          <div class="item-header">
+            <div>
+              <div class="item-title">Classical Cipher Cryptanalysis</div>
+              <div class="item-subtitle">C · Algorithms · CS 642</div>
+            </div>
+          </div>
+          <ul>
+            <li>Implemented automated attacks on rotation, Vigenère, and substitution ciphers.</li>
+            <li>Used frequency analysis, key search heuristics, and dictionary scoring to recover both keys and plaintext.</li>
+          </ul>
+        </div>
+
+        <div class="item">
+          <div class="item-header">
+            <div>
+              <div class="item-title">Teeko AI Player · Minimax Game Agent</div>
+              <div class="item-subtitle">Python · Minimax · Game Search</div>
+            </div>
+          </div>
+          <ul>
+            <li>Implemented a minimax-based AI for the board game Teeko with successor generation and heuristic evaluation.</li>
+            <li>Optimized search depth and evaluation so the agent could choose strong moves within a five-second limit.</li>
+          </ul>
+        </div>
+
+        <div class="item">
+          <div class="item-header">
+            <div>
+              <div class="item-title">LeNet-5 Scene Recognition</div>
+              <div class="item-subtitle">PyTorch · CNNs · MiniPlaces Dataset</div>
+            </div>
+          </div>
+          <ul>
+            <li>Implemented a LeNet-5 convolutional neural network in PyTorch for 100-class scene recognition.</li>
+            <li>Experimented with batch size, learning rate, and training epochs to study their effect on validation accuracy and runtime.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="contact">
+        <h2>Contact</h2>
+        <p>
+          I am currently applying to graduate programs in computer science with interests in AI security,
+          trustworthy systems, and applied systems research.
+        </p>
+        <p style="margin-top: 6px;">
+          <strong>Email:</strong> <a href="mailto:rliao25@wisc.edu">rliao25@wisc.edu</a><br />
+          <!-- TODO: Remove phone if you do not want it public -->
+          <strong>Phone:</strong> +1 (608) 949-4555<br />
+          <strong>Location:</strong> Madison, WI · Linkou District, New Taipei City, Taiwan
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      © <span id="year"></span> Ruei-Hong (David) Liao
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
