@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Ruei-Hong (David) Liao</title>
+  <title>Ruei-Hong (David) Liao · Resume</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Personal homepage of Ruei-Hong (David) Liao, computer science student interested in AI security and trustworthy systems." />
+  <meta name="description" content="Resume website for Ruei-Hong (David) Liao — Computer Science @ UW–Madison. Interests: AI security and trustworthy systems." />
   <style>
     :root {
       --bg: #f5f5f7;
@@ -19,11 +19,7 @@
       --radius-xl: 24px;
     }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -33,16 +29,13 @@
       padding: 24px;
     }
 
-    .page {
-      max-width: 900px;
-      margin: 0 auto;
-    }
+    .page { max-width: 980px; margin: 0 auto; }
 
     header {
       display: flex;
       flex-direction: column;
       gap: 16px;
-      margin-bottom: 28px;
+      margin-bottom: 18px;
     }
 
     .nav {
@@ -50,6 +43,7 @@
       justify-content: flex-end;
       gap: 18px;
       font-size: 0.95rem;
+      flex-wrap: wrap;
     }
 
     .nav a {
@@ -65,66 +59,58 @@
     }
 
     .hero {
-      background: rgba(255, 255, 255, 0.9);
+      background: rgba(255, 255, 255, 0.92);
       border-radius: var(--radius-xl);
       padding: 28px 24px;
       box-shadow: var(--shadow);
       display: grid;
-      grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
+      grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
       gap: 20px;
-      align-items: center;
+      align-items: start;
     }
 
-    @media (max-width: 720px) {
-      .hero {
-        grid-template-columns: 1fr;
-      }
+    @media (max-width: 820px) {
+      .hero { grid-template-columns: 1fr; }
     }
 
-    .hero-left h1 {
-      font-size: 1.9rem;
-      margin-bottom: 4px;
-    }
-
-    .hero-tagline {
-      font-size: 1rem;
-      color: var(--text-muted);
-      margin-bottom: 12px;
-    }
+    .hero-left h1 { font-size: 2rem; margin-bottom: 6px; }
+    .hero-tagline { font-size: 1rem; color: var(--text-muted); margin-bottom: 10px; }
 
     .hero-pill {
       display: inline-flex;
       align-items: center;
-      gap: 6px;
+      gap: 8px;
       font-size: 0.85rem;
       background: var(--accent-light);
       color: var(--accent);
-      padding: 4px 10px;
+      padding: 5px 12px;
       border-radius: 999px;
       margin-bottom: 10px;
+      width: fit-content;
     }
 
     .hero-meta {
-      font-size: 0.9rem;
+      font-size: 0.95rem;
       color: var(--text-muted);
-      margin-bottom: 10px;
+      margin-bottom: 12px;
     }
 
     .hero-links {
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
-      margin-top: 6px;
+      margin-top: 8px;
     }
 
     .hero-links a {
-      font-size: 0.9rem;
+      font-size: 0.92rem;
       text-decoration: none;
-      padding: 6px 12px;
+      padding: 7px 12px;
       border-radius: 999px;
       border: 1px solid var(--border);
       color: var(--text-main);
       background: #fff;
+      transition: transform 0.05s ease, border-color 0.15s ease;
     }
 
     .hero-links a.primary-link {
@@ -133,21 +119,37 @@
       border-color: var(--accent);
     }
 
-    .hero-links a:hover {
-      border-color: var(--accent);
-    }
+    .hero-links a:hover { border-color: var(--accent); transform: translateY(-1px); }
 
     .hero-right {
       font-size: 0.95rem;
       color: var(--text-muted);
     }
 
+    .kv {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 8px;
+      margin-top: 10px;
+      font-size: 0.92rem;
+    }
+
+    .kv div {
+      background: rgba(37, 99, 235, 0.06);
+      border: 1px solid #2563eb22;
+      border-radius: 12px;
+      padding: 10px 12px;
+      color: var(--text-main);
+    }
+
+    .kv strong { display: inline-block; min-width: 92px; color: var(--text-muted); font-weight: 600; }
+
     main {
       display: flex;
       flex-direction: column;
       gap: 18px;
-      margin-top: 12px;
-      margin-bottom: 32px;
+      margin-top: 18px;
+      margin-bottom: 28px;
     }
 
     section {
@@ -158,53 +160,49 @@
       border: 1px solid #e5e7eb44;
     }
 
-    section h2 {
-      font-size: 1.2rem;
-      margin-bottom: 10px;
-    }
+    section h2 { font-size: 1.2rem; margin-bottom: 10px; }
 
     .item {
-      margin-top: 8px;
-      padding-top: 8px;
+      margin-top: 10px;
+      padding-top: 10px;
       border-top: 1px solid var(--border);
     }
 
-    .item:first-of-type {
-      border-top: none;
-      padding-top: 0;
-    }
+    .item:first-of-type { border-top: none; padding-top: 0; margin-top: 0; }
 
     .item-header {
       display: flex;
       justify-content: space-between;
+      align-items: baseline;
       gap: 12px;
-      font-size: 0.93rem;
-      margin-bottom: 2px;
+      flex-wrap: wrap;
+      margin-bottom: 4px;
     }
 
-    .item-title {
-      font-weight: 600;
+    .item-title { font-weight: 650; }
+    .item-subtitle { font-size: 0.92rem; color: var(--text-muted); }
+    .item-meta { font-size: 0.88rem; color: var(--text-muted); }
+
+    ul { margin-left: 18px; margin-top: 6px; font-size: 0.95rem; }
+    ul li + li { margin-top: 4px; }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 8px;
     }
 
-    .item-subtitle {
-      font-size: 0.9rem;
-      color: var(--text-muted);
+    .chip {
+      font-size: 0.86rem;
+      padding: 6px 10px;
+      border: 1px solid var(--border);
+      background: #fff;
+      border-radius: 999px;
+      color: var(--text-main);
     }
 
-    .item-meta {
-      font-size: 0.85rem;
-      color: var(--text-muted);
-    }
-
-    ul {
-      margin-left: 16px;
-      margin-top: 4px;
-      font-size: 0.93rem;
-    }
-
-    ul li + li {
-      margin-top: 3px;
-    }
+    .muted { color: var(--text-muted); }
 
     footer {
       font-size: 0.8rem;
@@ -212,12 +210,17 @@
       text-align: center;
       margin-top: 8px;
     }
+
+    /* Optional: make anchor jumps feel nicer */
+    html { scroll-behavior: smooth; }
   </style>
 </head>
 <body>
   <div class="page">
     <header>
       <nav class="nav">
+        <a href="#education">Education</a>
+        <a href="#skills">Skills</a>
         <a href="#experience">Experience</a>
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
@@ -226,172 +229,243 @@
       <div class="hero">
         <div class="hero-left">
           <div class="hero-pill">
-            <span>🎓</span>
-            <span>UW–Madison · Computer Science</span>
+            <span>📄</span>
+            <span>Resume</span>
           </div>
+
           <h1>Ruei-Hong (David) Liao</h1>
           <p class="hero-tagline">
-            Interested in AI security, trustworthy systems, and real-world reliability.
+            Computer Science @ UW–Madison · Interested in AI security and trustworthy systems
           </p>
+
           <p class="hero-meta">
-            B.S. Computer Science, University of Wisconsin–Madison (Dec 2025) · GPA 3.739
+            B.S. Computer Science (Dec 2025) · GPA 3.739 · Dean’s List
           </p>
+
           <div class="hero-links">
-            <!-- TODO: Replace with your actual URLs -->
-            <a class="primary-link" href="mailto:davidliao0530@gmail.comProfile image">Email</a>
+            <a class="primary-link" href="mailto:rliao25@wisc.edu">Email (UW)</a>
+            <a href="mailto:davylao1@gmail.com">Email (Personal)</a>
             <a class="primary-link" href="https://github.com/Dliao0530" target="_blank" rel="noopener">GitHub</a>
             <a class="primary-link" href="https://www.linkedin.com/in/ruei-hong-liao-ba8868216/" target="_blank" rel="noopener">LinkedIn</a>
-            <!-- Optional: link to PDF resume -->
-            <!-- <a href="David_Liao_Resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a> -->
+            <a href="David_Liao_Resume.pdf" target="_blank">Resume (PDF)</a>            <!-- <a href="David_Liao_Grad_Resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a> -->
+          </div>
+
+          <div class="kv" style="margin-top: 12px;">
+            <div><strong>Taiwan:</strong> Linkou, New Taipei City</div>
           </div>
         </div>
 
         <div class="hero-right">
           <p>
-            I like working on systems that people actually rely on: EV charging platforms,
-            security tooling, and AI systems that have to behave safely and predictably.
+            I build software that needs to work in the real world: EV charging platforms,
+            security tooling, and systems that must behave safely and predictably.
           </p>
-          <p>
-            Recently, I have:
+          <p style="margin-top: 10px;">
+            Highlights:
           </p>
           <ul>
-            <li>Built a production EV charging information platform in Taiwan’s national ecosystem.</li>
-            <li>Developed exploits and cryptanalysis tools for a graduate security course (CS 642).</li>
-            <li>Implemented deep learning and search-based game AI in coursework.</li>
+            <li>Production EV charging information platform for Taiwan’s national ecosystem.</li>
+            <li>Security internships + coursework in cryptography, information security, and systems.</li>
+            <li>Projects in real-time dashboards (SSE), mobile apps, and exploitation/cryptanalysis tooling.</li>
           </ul>
         </div>
       </div>
     </header>
 
     <main>
+      <section id="education">
+        <h2>Education</h2>
+
+        <div class="item">
+          <div class="item-header">
+            <div>
+              <div class="item-title">University of Wisconsin–Madison</div>
+              <div class="item-subtitle">B.S. Computer Science · Madison, WI · Dec 2025</div>
+            </div>
+            <div class="item-meta">GPA 3.739 · Dean’s List</div>
+          </div>
+
+          <div class="item-subtitle" style="margin-top: 6px;">
+            <strong>Relevant Coursework:</strong>
+            Introduction to Computer Engineering; Introductory Applied Statistics for Engineering;
+            Introduction to Cryptography; Introduction to AI; Machine Organization and Programming;
+            Introduction to Algorithm; Intro to Information Security; Intro to Operating Systems;
+            Foundations of Mobile Systems and Applications; Education, Technology, and Society: AI, Big Data, and the Digital Divide
+          </div>
+        </div>
+      </section>
+
+      <section id="skills">
+        <h2>Technical Skills</h2>
+
+        <div class="item">
+          <div class="item-header">
+            <div class="item-title">Programming</div>
+          </div>
+          <div class="chips">
+            <span class="chip">Java</span>
+            <span class="chip">Bash</span>
+            <span class="chip">HTML/CSS</span>
+            <span class="chip">JavaScript</span>
+            <span class="chip">C</span>
+            <span class="chip">Python</span>
+            <span class="chip">Go</span>
+            <span class="chip">Angular</span>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="item-header">
+            <div class="item-title">Operating Systems</div>
+          </div>
+          <div class="chips">
+            <span class="chip">Windows</span>
+            <span class="chip">Linux</span>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="item-header">
+            <div class="item-title">Tools</div>
+          </div>
+          <div class="chips">
+            <span class="chip">Git</span>
+            <span class="chip">MS Excel</span>
+            <span class="chip">PowerPoint</span>
+            <span class="chip">Google Docs</span>
+            <span class="chip">VScode</span>
+            <span class="chip">Android Studio</span>
+          </div>
+        </div>
+      </section>
+
       <section id="experience">
         <h2>Experience</h2>
 
         <div class="item">
           <div class="item-header">
             <div>
-              <div class="item-title">Software Engineering Intern · Micro-Star International (MSI)</div>
-              <div class="item-subtitle">Taipei, Taiwan · May 2025 – Aug 2025</div>
+              <div class="item-title">Intern · Micro-Star International (MSI)</div>
+              <div class="item-subtitle">In-Person · May 2025 – Aug 2025</div>
             </div>
+            <div class="item-meta">Taipei, Taiwan</div>
           </div>
           <ul>
-            <li>Developed and deployed a production EV charging information platform used in Taiwan’s national charging ecosystem.</li>
-            <li>Integrated Angular frontend with Go / Gin / GORM / PostgreSQL and Docker to deliver real-time charger status and metrics.</li>
-            <li>Implemented compliance with Taiwan’s EV Charger Data Standard (XML V1.03) for operators, stations, connectors, and live status feeds.</li>
-            <li>Designed secure user workflows, including authentication, password recovery, and charge point operator assignment with validation.</li>
+            <li>Developed and deployed a production-ready EV charging information platform used in Taiwan’s national charging ecosystem, integrating Angular with Go (Gin Gonic), GORM, PostgreSQL, and Docker.</li>
+            <li>Implemented compliance with Taiwan Ministry of Transportation’s EV Charger Data Standard (XML schemas V1.03) for operators, stations, connectors, and real-time status feeds to enable interoperability across systems.</li>
+            <li>Built real-time dashboards and APIs using Server-Sent Events (SSE) for instant charger status and metrics.</li>
+            <li>Designed secure workflows including JWT authentication, password recovery, and CPO (Charge Point Operator) assignment with validations.</li>
+            <li><strong>Awards:</strong> Taiwan Excellence Award 2025; German design iF / Red Dot Awards 2025.</li>
           </ul>
         </div>
 
         <div class="item">
           <div class="item-header">
             <div>
-              <div class="item-title">Cybersecurity Intern · National Institute of Cybersecurity of Taiwan</div>
-              <div class="item-subtitle">Taipei, Taiwan · May 2024 – Aug 2024</div>
+              <div class="item-title">Intern · National Institute of Cybersecurity of Taiwan</div>
+              <div class="item-subtitle">In-Person · May 2024 – Aug 2024</div>
             </div>
+            <div class="item-meta">Taipei, Taiwan</div>
           </div>
           <ul>
-            <li>Integrated the Llama Guard safety module into ChatGPT-based examples to detect and respond to security-sensitive inputs.</li>
-            <li>Tested security configuration compliance tools for Red Hat Enterprise Linux 8 and deployed Windows Server 2016 government baselines using LGPO.</li>
+            <li>Integrated the Llama Guard module into ChatGPT examples to detect and respond to security threats.</li>
+            <li>Used Azure AI voice services to convert presentation notes into voiceovers for Government Configuration Baseline instructional videos.</li>
+            <li>Tested security configuration compliance tooling for Red Hat Enterprise Linux 8.</li>
+            <li>Deployed Windows Server 2016 TW Government Configuration Baseline using LGPO to enhance OS configuration security.</li>
             <li>Conducted host vulnerability scanning and validation using Nessus and Nmap.</li>
-            <li>Supported creation of instructional materials on secure configuration and studied CEH material to deepen knowledge of attack and defense techniques.</li>
-          </ul>
-        </div>
-
-        <div class="item">
-          <div class="item-header">
-            <div>
-              <div class="item-title">Assistant Teacher · Wiedu Corporation</div>
-              <div class="item-subtitle">Remote · Jun 2021 – Aug 2021</div>
-            </div>
-          </div>
-          <ul>
-            <li>Assisted instructors in teaching coding courses covering Java, HTML, MySQL, JDBC, JavaScript, and related web technologies.</li>
+            <li>Studied EC-Council CEH materials to strengthen attack/defense foundations.</li>
           </ul>
         </div>
       </section>
 
       <section id="projects">
-        <h2>Selected Projects</h2>
+        <h2>Projects</h2>
 
         <div class="item">
           <div class="item-header">
             <div>
-              <div class="item-title">Econnect Monitor · EV Charging Platform</div>
-              <div class="item-subtitle">Angular · Go / Gin · PostgreSQL · Docker</div>
+              <div class="item-title">Econnect Monitor · Electric Vehicle Charging Platform</div>
+              <div class="item-subtitle">Angular · Go/Gin · PostgreSQL · Docker</div>
             </div>
           </div>
           <ul>
-            <li>Built a full-stack EV charging monitoring system with real-time dashboards via Server-Sent Events (SSE).</li>
-            <li>Implemented CPO management tools (search, edit, station assignment) and support for Taiwan’s EV Charger Data Standard.</li>
-            <li>Part of a design that received an iF Design Award for an energy management system.</li>
+            <li>Built a full-stack electric vehicle charging monitoring system.</li>
+            <li>Implemented real-time charger status dashboards (SSE) and CPO management tools (search, edit, station assignment).</li>
+            <li>Integrated with Taiwan’s EV Charger Data Standard (XML V1.03) to enable nationwide interoperability.</li>
+            <li><strong>Awarded:</strong> Taiwan Excellence Award 2025; German design iF / Red Dot Awards 2025.</li>
           </ul>
         </div>
 
         <div class="item">
           <div class="item-header">
             <div>
-              <div class="item-title">Control Flow Hijacking & ROP Exploitation</div>
-              <div class="item-subtitle">C · x86-64 · GDB · ROPgadget · CS 642</div>
+              <div class="item-title">Teeko AI Player · Minimax Algorithm</div>
+              <div class="item-subtitle">Python · Game Search</div>
             </div>
           </div>
           <ul>
-            <li>Engineered stack and heap overflow exploits to hijack control flow in vulnerable binaries.</li>
-            <li>Chained PLT calls and ROP gadgets to perform privileged actions and launch shell access.</li>
-            <li>Used GDB and ROPgadget to analyze memory layout, extract gadgets, and debug payloads step by step.</li>
+            <li>Implemented a minimax-based AI with successor generation, terminal-state scoring, and a custom heuristic.</li>
+            <li>Tuned depth and heuristics to make strong moves within a five-second limit and win consistently against automated opponents.</li>
           </ul>
         </div>
 
         <div class="item">
           <div class="item-header">
             <div>
-              <div class="item-title">Classical Cipher Cryptanalysis</div>
-              <div class="item-subtitle">C · Algorithms · CS 642</div>
+              <div class="item-title">Control Flow Hijacking & ROP Project</div>
+              <div class="item-subtitle">C · x86 · GDB</div>
             </div>
           </div>
           <ul>
-            <li>Implemented automated attacks on rotation, Vigenère, and substitution ciphers.</li>
-            <li>Used frequency analysis, key search heuristics, and dictionary scoring to recover both keys and plaintext.</li>
+            <li>Engineered exploits using stack/heap overflows and chained PLT + gadget calls to perform privileged actions.</li>
+            <li>Designed custom ROP payloads to manipulate registers/arguments and execute protected function sequences.</li>
+            <li>Validated exploit behavior step-by-step using GDB memory inspection and register tracing for reproducibility.</li>
           </ul>
         </div>
 
         <div class="item">
           <div class="item-header">
             <div>
-              <div class="item-title">Teeko AI Player · Minimax Game Agent</div>
-              <div class="item-subtitle">Python · Minimax · Game Search</div>
+              <div class="item-title">Applied Cryptanalysis Tools</div>
+              <div class="item-subtitle">C · Statistics + Search Heuristics</div>
             </div>
           </div>
           <ul>
-            <li>Implemented a minimax-based AI for the board game Teeko with successor generation and heuristic evaluation.</li>
-            <li>Optimized search depth and evaluation so the agent could choose strong moves within a five-second limit.</li>
+            <li>Built cryptanalysis routines for classical ciphers using statistical analysis and search heuristics.</li>
+            <li>Used frequency/dictionary scoring to evaluate plaintext candidates and automate key recovery.</li>
           </ul>
         </div>
 
         <div class="item">
           <div class="item-header">
             <div>
-              <div class="item-title">LeNet-5 Scene Recognition</div>
-              <div class="item-subtitle">PyTorch · CNNs · MiniPlaces Dataset</div>
+              <div class="item-title">Badger Huddle · Pickup Sports Mobile App</div>
+              <div class="item-subtitle">Kotlin · Android Studio · Firebase/Server Backend</div>
             </div>
           </div>
           <ul>
-            <li>Implemented a LeNet-5 convolutional neural network in PyTorch for 100-class scene recognition.</li>
-            <li>Experimented with batch size, learning rate, and training epochs to study their effect on validation accuracy and runtime.</li>
+            <li>Designed an Android app for UW–Madison students to host, join, and discover pickup sports games across campus facilities.</li>
+            <li>Implemented check-in via device geolocation, hosting/RSVP flows, and discovery of active/nearby sessions.</li>
+            <li>Created profiles with preferred sports and availability to help users form repeat groups and friendships.</li>
+            <li>Planned backend architecture for courts, live player counts, RSVPs, and UW-only participation.</li>
           </ul>
         </div>
       </section>
 
       <section id="contact">
         <h2>Contact</h2>
-        <p>
-          I am currently applying to graduate programs in computer science with interests in AI security,
-          trustworthy systems, and applied systems research.
+
+        <p class="muted">
+          (Tip: If you don’t want your full address public, remove it below and keep just City/Country.)
         </p>
-        <p style="margin-top: 6px;">
-          <strong>Email:</strong> <a href="mailto:davidliao0530@gmail.com">davidliao0530@gmail.comProfile image</a><br />
-          <!-- TODO: Remove phone if you do not want it public -->
-          <strong>Phone:</strong> +1 (608) 949-4555 or +886 (966) 309-481<br />
-          <strong>Location:</strong> 5F No. 311, Ren'ai Rd. Section 2, Linkou District, New Taipei City, Taiwan
+
+        <p style="margin-top: 10px;">
+          <strong>Email (UW):</strong> <a href="mailto:rliao25@wisc.edu">rliao25@wisc.edu</a><br />
+          <strong>Email (Personal):</strong> <a href="mailto:davylao1@gmail.com">davylao1@gmail.com</a><br />
+          <strong>Phone (US):</strong> +1 (608) 949-4555<br />
+          <strong>Phone (TW):</strong> +886 966-309-481<br />
+          <strong>Addresses:</strong><br />
+          Linkou District, New Taipei City, Taiwan
         </p>
       </section>
     </main>
